@@ -36,55 +36,55 @@ if (!fs.existsSync("./package-lock.json")) {
     console.log("[ERROR] Automatic install package is failed. Error:\n" + err);
     process.exit(0);
   }
-}
 
-const List = ["normal", "beta"];
-
-if (!List.includes(`${require("./config.json").whatsapp}`.toLowerCase())) {
-  throw new Error(
-    `The config.json for whatsapp is ${
-      require("./config.json").whatsapp
-    }. But the available is: "normal" and "beta".`
-  );
-}
-
-switch (`${require("./config.json").whatsapp}`.toLowerCase()) {
-  case "normal":
-    console.log(
-      "[INFO] Success to install all package. Trying to install whatsapp-web.js.. This can took a long minutes.."
+  const List = ["normal", "beta"];
+  
+  if (!List.includes(`${require("./config.json").whatsapp}`.toLowerCase())) {
+    throw new Error(
+      `The config.json for whatsapp is ${
+        require("./config.json").whatsapp
+      }. But the available is: "normal" and "beta".`
     );
-
-    try {
-      child.execSync("npm i whatsapp-web.js");
-    } catch (err) {
-      console.log("[ERROR] Install whatsapp-web.js is failed. Error:\n" + err);
-      process.exit(0);
-    }
-
-    console.log(
-      "[INFO] Install package is complete. Please restart this project."
-    );
-    process.exit(0);
-    break;
-  case "beta":
-    console.log(
-      "[INFO] Success to install all package. Trying to install whatsapp-web.js (BETA).. This can took a long minutes.."
-    );
-
-    try {
-      child.execSync("npm i github:pedroslopez/whatsapp-web.js#multidevice");
-    } catch (err) {
+  }
+  
+  switch (`${require("./config.json").whatsapp}`.toLowerCase()) {
+    case "normal":
       console.log(
-        "[ERROR] Install whatsapp-web.js (BETA) is failed. Error:\n" + err
+        "[INFO] Success to install all package. Trying to install whatsapp-web.js.. This can took a long minutes.."
+      );
+  
+      try {
+        child.execSync("npm i whatsapp-web.js");
+      } catch (err) {
+        console.log("[ERROR] Install whatsapp-web.js is failed. Error:\n" + err);
+        process.exit(0);
+      }
+  
+      console.log(
+        "[INFO] Install package is complete. Please restart this project."
       );
       process.exit(0);
-    }
-
-    console.log(
-      "[INFO] Install package is complete. Please restart this project."
-    );
-    process.exit(0);
-    break;
+      break;
+    case "beta":
+      console.log(
+        "[INFO] Success to install all package. Trying to install whatsapp-web.js (BETA).. This can took a long minutes.."
+      );
+  
+      try {
+        child.execSync("npm i github:pedroslopez/whatsapp-web.js#multidevice");
+      } catch (err) {
+        console.log(
+          "[ERROR] Install whatsapp-web.js (BETA) is failed. Error:\n" + err
+        );
+        process.exit(0);
+      }
+  
+      console.log(
+        "[INFO] Install package is complete. Please restart this project."
+      );
+      process.exit(0);
+      break;
+  }
 }
 
 require("./src/index.js")();
