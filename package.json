@@ -4,6 +4,7 @@
   "description": "Whatsapp-web.js handler.",
   "main": "index.js",
   "scripts": {
+    "test": "npm run start:nofm",
     "start": "npm run run && npm run fm",
     "start:dev": "npm run run:dev && npm run fm",
     "start:nofm": "npm run run",
