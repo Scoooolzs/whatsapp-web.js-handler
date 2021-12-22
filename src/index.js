@@ -1,10 +1,9 @@
 const fs = require("fs");
 
 module.exports = () => {
-  const SESSION_FILE_PATH = "./session.json";
   let sessionCfg;
-  if (fs.existsSync(SESSION_FILE_PATH)) {
-    sessionCfg = require(SESSION_FILE_PATH);
+  if (fs.existsSync("./src/session.json")) {
+    sessionCfg = require("./session.json");
   }
 
   const { Collection } = require("@discordjs/collection");
