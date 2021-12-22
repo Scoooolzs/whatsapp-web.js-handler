@@ -4,8 +4,14 @@
   "description": "Whatsapp-web.js handler.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "npm run run",
+    "run": "node index.js",
+    
     "fm": "prettier --write ."
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "7.x"
   },
   "repository": {
     "type": "git",
@@ -25,6 +31,11 @@
   "dependencies": {
     "@discordjs/collection": "^0.3.2",
     "host-checker": "^1.1.1",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.15.3"
+  },
+  "devDependencies": {
+    "node": "^16.6.1"
   }
 }
