@@ -10,3 +10,6 @@ A simple [Whatsapp-web.js][1] handler powered by [Discord.js Collections][2].
 ## Tutorial
 
 ***Tutorial soon!***
+
+[1]: https://npmjs.com/package/whatsapp-web.js
+[2]: https://npmjs.com/package/@discordjs/collection
