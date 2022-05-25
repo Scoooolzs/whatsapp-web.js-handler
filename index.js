@@ -7,9 +7,9 @@ if (hc.IsHosting("replit") && process.versions.node.split(".")[0] < 16) {
     "[INFO] This Replit doesn't use Node.js v16 or newer, trying to install Node.js v16..."
   );
   execSync(
-    `npm i --save-dev node@16.6.1 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH`
+    `npm i --save-dev node@17.9.0 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH`
   );
-  console.log("[INFO] Node.js v16 has been installed, please restart the bot.");
+  console.log("[INFO] Node.js v17 has been installed, please restart the bot.");
   process.exit(0);
 }
 

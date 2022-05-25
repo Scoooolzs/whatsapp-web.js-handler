@@ -14,7 +14,7 @@
     "fm": "prettier --write ."
   },
   "engines": {
-    "node": "^16.x"
+    "node": "^17.x"
   },
   "repository": {
     "type": "git",

@@ -1,1 +1,1 @@
-worker: heroku.sh
+worker: bash heroku.sh
