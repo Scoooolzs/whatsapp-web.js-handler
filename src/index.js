@@ -7,13 +7,13 @@ module.exports = () => {
   }
 
   const { Collection } = require("@discordjs/collection");
-  const { Client } = require("whatsapp-web.js");
+  const { Client, LocalAuth } = require("whatsapp-web.js");
   const client = new Client({
     puppeteer: {
       headless: false,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
     },
-    session: sessionCfg,
+    authStrategy: new LocalAuth()
   });
 
   client.commands = new Collection();
