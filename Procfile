@@ -1,1 +1,1 @@
-worker: node heroku-not-supported.js
+worker: heroku.sh
