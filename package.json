@@ -32,7 +32,7 @@
   "author": "Scoooolzs",
   "license": "MIT",
   "dependencies": {
-    "@discordjs/collection": "^0.6.0",
+    "@discordjs/collection": "^0.7.0",
     "host-checker": "^1.1.1",
     "qrcode-terminal": "^0.12.0",
     "whatsapp-web.js": "^1.16.6"
