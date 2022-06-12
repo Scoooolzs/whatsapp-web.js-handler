@@ -35,7 +35,7 @@
     "@discordjs/collection": "^0.6.0",
     "host-checker": "^1.1.1",
     "qrcode-terminal": "^0.12.0",
-    "whatsapp-web.js": "^1.16.6"
+    "whatsapp-web.js": "^1.16.7"
   },
   "devDependencies": {
     "node": "^16.6.1",
