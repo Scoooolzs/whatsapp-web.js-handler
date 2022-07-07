@@ -38,7 +38,7 @@
     "whatsapp-web.js": "^1.16.6"
   },
   "devDependencies": {
-    "node": "^16.6.1",
+    "node": "^18.5.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1"
   }
